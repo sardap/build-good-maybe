@@ -1,0 +1,34 @@
+[[Graphics]]
+name="Example One"
+options=[
+    "-fts",				    # Create s file
+    "-m!",				    # No Map
+    "-gB8",				    # output 8bpp graphics
+    "-gu8",                 # output as bytes
+    "-gT FF00FF",		    # RGB 24 BIT
+    "-pS",				    # Share pallet
+    "-Mh2",			        # output data as byte array
+    "-Mw2",         	
+    "-O SharedExampleOne"       # Shared pallet name
+]
+files=[
+    "gfx/RedSqaure.aseprite",
+    "gfx/YellowSqaure.psd"
+]
+
+[[Graphics]]
+name="Example Two"
+options=[
+    "-fts",				    # Create s file
+    "-m!",				    # No Map
+    "-gB8",				    # output 8bpp graphics
+    "-gu8",                 # output as bytes
+    "-gT FF00FF",		    # RGB 24 BIT
+    "-pS",				    # Share pallet
+    "-Mh2",			        # output data as byte array
+    "-Mw2",         	
+    "-O SharedExampleTwo"       # Shared pallet name
+]
+files=[
+    "gfx/BlueSqaure.png",
+]
