@@ -1,5 +1,6 @@
 [[Graphics]]
 name="Example One"
+mode="grit"
 options=[
     "-fts",				    # Create s file
     "-m!",				    # No Map
@@ -9,7 +10,7 @@ options=[
     "-pS",				    # Share pallet
     "-Mh2",			        # output data as byte array
     "-Mw2",         	
-    "-O SharedExampleOne"       # Shared pallet name
+    "-OSharedExampleOne"       # Shared pallet name
 ]
 files=[
     "gfx/RedSqaure.aseprite",
@@ -18,6 +19,7 @@ files=[
 
 [[Graphics]]
 name="Example Two"
+mode="grit"
 options=[
     "-fts",				    # Create s file
     "-m!",				    # No Map
@@ -27,8 +29,21 @@ options=[
     "-pS",				    # Share pallet
     "-Mh2",			        # output data as byte array
     "-Mw2",         	
-    "-O SharedExampleTwo"       # Shared pallet name
+    "-OSharedExampleTwo"       # Shared pallet name
 ]
 files=[
     "gfx/BlueSqaure.png",
+]
+
+[[Graphics]]
+name="example_three"
+mode="bmp2gba"
+options=[
+    "--transparent-color", "FF00FF",
+    "--brute-force-count", "250000"
+]
+files=[
+    "gfx/backgrounds/crBiscut.png",
+    "gfx/backgrounds/crBuildings.aseprite",
+    "gfx/backgrounds/mgBeach.psd",
 ]

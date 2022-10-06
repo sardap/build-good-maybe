@@ -8,4 +8,5 @@ require (
 	github.com/ettle/strcase v0.1.1 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/oov/psd v0.0.0-20220121172623-5db5eafcecbb // indirect
+	golang.org/x/image v0.0.0-20220902085622-e7cb96979f69 // indirect
 )
