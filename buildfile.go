@@ -13,6 +13,8 @@ type BuildFile struct {
 }
 
 func (b *BuildFile) Generate(assetsPath, generatePath string) error {
+	os.MkdirAll(generatePath, 0777)
+
 	workQueue := []GraphicsOutput{}
 	for _, out := range b.Graphics {
 		if out.Changed(assetsPath) {

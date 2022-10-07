@@ -155,6 +155,9 @@ func generatePng(ctx context.Context, inFile, OutFile string) error {
 		return err
 	}
 
+	os.Remove(strings.TrimSuffix(OutFile, ".png") + ".c")
+	os.Remove(strings.TrimSuffix(OutFile, ".png") + ".h")
+
 	f, _ := os.Create(OutFile)
 	defer f.Close()
 	return png.Encode(f, img)
@@ -242,6 +245,15 @@ func (g *GraphicsOutput) generateGrit(ctx context.Context, assetsPath, generateP
 			os.Remove(file)
 		}
 	}(generatedFiles)
+
+	for _, option := range g.Options {
+		if len(option) > 2 && option[0:2] == "-O" {
+			fmt.Printf("%s\n", filepath.Join(generatePath, option[2:]+".h"))
+			os.Remove(filepath.Join(generatePath, option[2:]+".h"))
+			os.Remove(filepath.Join(generatePath, option[2:]+".s"))
+			os.Remove(filepath.Join(generatePath, option[2:]+".c"))
+		}
+	}
 
 	args := append(generatedFiles, g.Options...)
 	cmd := exec.Command(gritCmdPath, args...)

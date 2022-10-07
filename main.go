@@ -43,14 +43,15 @@ func main() {
 		MakePathIdx      = 4
 		makeArgsIdx      = 5
 	)
-	if len(os.Args) == outPathIdx {
+	if len(os.Args) == outPathIdx && len(os.Args) != makeArgsIdx+1 {
 		printHelp()
 		return
 	}
 
 	cmd := os.Args[1]
 	if cmd == "-h" {
-		fmt.Printf("\n")
+		printHelp()
+		return
 	}
 
 	outPath := os.Args[outPathIdx]
