@@ -9,7 +9,8 @@ import (
 )
 
 type BuildFile struct {
-	Graphics []GraphicsOutput
+	MaxAnimeFrames int `toml:"max_anime_frames"`
+	Graphics       []GraphicsOutput
 }
 
 func (b *BuildFile) Generate(assetsPath, generatePath string) error {

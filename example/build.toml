@@ -1,3 +1,4 @@
+max_anime_frames=5
 [[Graphics]]
 name="Example One"
 mode="grit"
@@ -16,6 +17,10 @@ files=[
     "gfx/RedSqaure.aseprite",
     "gfx/YellowSqaure.psd"
 ]
+[[Graphics.animes]]
+for="GfxRedSqaure.h"
+size="32x32"
+frames=["idle", "crying"]
 
 [[Graphics]]
 name="Example Two"
