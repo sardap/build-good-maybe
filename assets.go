@@ -390,7 +390,7 @@ func (g *GraphicsOutput) generateAnimes(ctx context.Context, assetsPath, generat
 			l, _ := strconv.ParseInt(lStr, 10, 10)
 			rStr := splits[1]
 			r, _ := strconv.ParseInt(rStr, 10, 10)
-			return int(l * r)
+			return int(l / 2 * r / 2)
 		}()
 
 		for i, frame := range anime.Frames {
